@@ -1,0 +1,367 @@
+/* Footer Smart Rent - Versão Demonstração */
+
+/* Banner de Demonstração - Mais Visível */
+.demo-banner {
+  background: linear-gradient(135deg, #FF6B6B, #EE5A24);
+  padding: var(--spacing-md) 0;
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  position: relative;
+  border: 2px solid rgba(255,255,255,0.2);
+  box-shadow: 0 4px 20px rgba(238, 90, 36, 0.3);
+}
+
+.demo-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.demo-badge {
+  text-align: center;
+  color: var(--white);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-xs) var(--spacing-md);
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+/* Footer Principal */
+.footer-smartrent {
+  background: linear-gradient(135deg, #1a237e 0%, #0d47a1 50%, #01579b 100%);
+  color: var(--white);
+  padding: var(--spacing-3xl) 0 var(--spacing-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-smartrent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  pointer-events: none;
+}
+
+.footer-smartrent .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Seção de Brand */
+.footer-brand-smartrent {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-logo-smartrent {
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-logo-image-smartrent {
+  height: 48px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.footer-logo-image-smartrent:hover {
+  transform: scale(1.05);
+}
+
+.footer-description-smartrent {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: rgba(255,255,255,0.9);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.footer-social-smartrent {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.footer-social-smartrent .social-link {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-lg);
+  background: rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.footer-social-smartrent .social-link:hover {
+  background: rgba(255,255,255,0.2);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Grid de Links */
+.footer-links-grid-smartrent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.footer-column-smartrent {
+  padding: var(--spacing-lg);
+  background: rgba(255,255,255,0.05);
+  border-radius: var(--border-radius-lg);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.footer-column-smartrent:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+.footer-title-smartrent {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--white);
+  position: relative;
+  padding-bottom: var(--spacing-sm);
+}
+
+.footer-title-smartrent::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: linear-gradient(90deg, #0066CC, #00ACC1);
+  border-radius: 2px;
+}
+
+.footer-links-list-smartrent {
+  list-style: none;
+}
+
+.footer-links-list-smartrent li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-link-smartrent {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  transition: all 0.2s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.footer-link-smartrent::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0066CC, #00ACC1);
+  transition: width 0.3s ease;
+}
+
+.footer-link-smartrent:hover {
+  color: var(--white);
+  transform: translateX(4px);
+}
+
+.footer-link-smartrent:hover::before {
+  width: 100%;
+}
+
+/* Buscas Populares */
+.footer-popular-searches-smartrent {
+  margin-bottom: var(--spacing-2xl);
+  padding: var(--spacing-xl);
+  background: rgba(0,102,204,0.1);
+  border-radius: var(--border-radius-lg);
+  backdrop-filter: blur(10px);
+}
+
+.popular-title-smartrent {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  color: var(--white);
+  text-align: center;
+}
+
+.popular-links-smartrent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+}
+
+.popular-link-smartrent {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: var(--font-size-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--border-radius-md);
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.popular-link-smartrent:hover {
+  background: rgba(255,255,255,0.2);
+  color: var(--white);
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.3);
+}
+
+/* Seção Legal */
+.footer-legal-smartrent {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: var(--spacing-xl);
+  text-align: center;
+}
+
+.legal-links-smartrent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.legal-link-smartrent {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  transition: color 0.2s ease;
+}
+
+.legal-link-smartrent:hover {
+  color: var(--white);
+}
+
+.separator {
+  color: rgba(255,255,255,0.5);
+  font-size: var(--font-size-sm);
+}
+
+.copyright-smartrent p {
+  color: rgba(255,255,255,0.6);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.copyright-smartrent .creci {
+  font-size: var(--font-size-xs);
+  color: rgba(255,255,255,0.5);
+}
+
+.copyright-smartrent .creci a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+}
+
+.copyright-smartrent .creci a:hover {
+  color: var(--white);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-links-grid-smartrent {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-social-smartrent {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .legal-links-smartrent {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .separator {
+    display: none;
+  }
+  
+  .popular-links-smartrent {
+    justify-content: flex-start;
+  }
+  
+  .demo-badge {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-smartrent {
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+  }
+  
+  .footer-brand-smartrent {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .footer-column-smartrent {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Animações Adicionais */
+.footer-smartrent {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efeito Hover Especial */
+.footer-column-smartrent:nth-child(1):hover { border-left: 3px solid #0066CC; }
+.footer-column-smartrent:nth-child(2):hover { border-left: 3px solid #00ACC1; }
+.footer-column-smartrent:nth-child(3):hover { border-left: 3px solid #26C6DA; }
+.footer-column-smartrent:nth-child(4):hover { border-left: 3px solid #29B6F6; }
+.footer-column-smartrent:nth-child(5):hover { border-left: 3px solid #4FC3F7; }
