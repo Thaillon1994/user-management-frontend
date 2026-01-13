@@ -1,8 +1,14 @@
 :root {
-  /* Cores Principais - Paleta Smart Rent */
+  /* Cores Principais - Paleta Smart Rent Baseada no Site Original */
   --primary-blue: #0066CC;
   --primary-blue-hover: #0052A3;
   --primary-blue-light: #E6F2FF;
+  --primary-gradient: linear-gradient(135deg, #0066CC, #004080);
+  
+  /* Cores Complementares */
+  --secondary-green: #28A745;
+  --secondary-orange: #FF7F50;
+  --secondary-purple: #6F42C1;
   
   /* Cores Neutras */
   --white: #FFFFFF;
@@ -18,7 +24,7 @@
   --gray-900: #202124;
   
   /* Cores de Status */
-  --success-green: #1E7E34;
+  --success-green: #28A745;
   --success-green-light: #D4EDDA;
   --error-red: #DC3545;
   --error-red-light: #F8D7DA;
@@ -37,6 +43,7 @@
   --background-primary: #FFFFFF;
   --background-secondary: #F8F9FA;
   --background-accent: #F1F3F4;
+  --background-hero: linear-gradient(135deg, rgba(0,102,204,0.95), rgba(0,64,128,0.85));
   
   /* Sombras e Bordas */
   --shadow-sm: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);

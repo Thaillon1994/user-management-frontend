@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import Header from './Header';
+import ResponsiveHeader from './ResponsiveHeader';
 import Footer from './Footer';
 import '../styles/PropertyCards.css';
+import '../styles/Responsive.css';
 
 export default function Layout() {
   const [user, setUser] = useState(null);
@@ -30,7 +31,7 @@ export default function Layout() {
 
   return (
     <div className="app">
-      <Header user={user} onLogin={handleLogin} onLogout={handleLogout} />
+      <ResponsiveHeader user={user} onLogin={handleLogin} onLogout={handleLogout} />
       <main className="main-content">
         <Outlet />
       </main>
