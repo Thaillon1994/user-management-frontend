@@ -11,15 +11,14 @@ export default function Layout() {
     // Mock login para demonstração
     const token = localStorage.getItem('token');
     if (token) {
-      // Usuários mock para demonstração
-      const mockUsers = {
-        'mock-token-user-123': { name: 'João Silva', email: 'joao@smartrent.com', role: 'User' },
-        'mock-token-admin-456': { name: 'Maria Admin', email: 'admin@smartrent.com', role: 'Admin' }
-      };
-      
-      const userData = mockUsers[token];
-      if (userData) {
-        setUser(userData);
+      // Primeiro tentar pegar do localStorage
+      const storedUser = localStorage.getItem('user');
+      if (storedUser) {
+        try {
+          setUser(JSON.parse(storedUser));
+        } catch (error) {
+          console.error('Erro ao carregar usuário do localStorage:', error);
+        }
       }
     }
   };

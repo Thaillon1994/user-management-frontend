@@ -13,14 +13,30 @@ export default function Login() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setError("");
+    
     try {
-      const result = await authService.login({ email, password });
-      localStorage.setItem("token", result.accessToken);
+      console.log("🔐 Iniciando tentativa de login...");
+      console.log("Email:", email);
+      console.log("Senha:", password);
       
-      // Forçar reload da página para atualizar estado do usuário
-      window.location.href = "/home";
-      window.location.reload();
+      const result = await authService.login({ email, password });
+      
+      console.log("✅ Login response:", result);
+      
+      if (result.success) {
+        console.log("🎉 Login bem sucedido!");
+        localStorage.setItem("token", result.accessToken);
+        localStorage.setItem("user", JSON.stringify(result.user));
+        
+        // Forçar reload da página para atualizar estado do usuário
+        window.location.href = "/home";
+        window.location.reload();
+      } else {
+        console.log("❌ Falha no login");
+      }
     } catch (err) {
+      console.error("💥 Erro no login:", err);
       setError(err.message || "Credenciais inválidas");
     }
   }

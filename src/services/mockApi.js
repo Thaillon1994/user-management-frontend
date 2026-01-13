@@ -49,15 +49,21 @@ export const authService = {
   async login(credentials) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        console.log("Tentando login com:", credentials.email, credentials.password);
+        console.log("=== TENTANDO LOGIN ===");
+        console.log("Email digitado:", credentials.email);
+        console.log("Senha digitada:", credentials.password);
+        
+        // Normalizar email (trim e lowercase)
+        const normalizedEmail = credentials.email.trim().toLowerCase();
         
         const user = mockUsers.find(u => 
-          u.email === credentials.email && credentials.password === "123456"
+          u.email === normalizedEmail && credentials.password === "123456"
         );
         
-        console.log("Usuário encontrado:", user);
+        console.log("Usuário mock encontrado:", user);
         
         if (user) {
+          console.log("✅ Login bem sucedido para:", user.name);
           resolve({
             success: true,
             accessToken: user.token,
@@ -69,9 +75,10 @@ export const authService = {
             }
           });
         } else {
-          reject(new Error("Email ou senha incorretos. Use: admin@smartrent.com / 123456"));
+          console.log("❌ Login falhou - usuário não encontrado");
+          reject(new Error("Email ou senha incorretos.\nUse: admin@smartrent.com / 123456"));
         }
-      }, 1000);
+      }, 500);
     });
   },
 
