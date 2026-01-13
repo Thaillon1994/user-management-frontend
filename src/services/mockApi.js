@@ -49,9 +49,13 @@ export const authService = {
   async login(credentials) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
+        console.log("Tentando login com:", credentials.email, credentials.password);
+        
         const user = mockUsers.find(u => 
           u.email === credentials.email && credentials.password === "123456"
         );
+        
+        console.log("Usuário encontrado:", user);
         
         if (user) {
           resolve({

@@ -16,7 +16,10 @@ export default function Login() {
     try {
       const result = await authService.login({ email, password });
       localStorage.setItem("token", result.accessToken);
+      
+      // Forçar reload da página para atualizar estado do usuário
       window.location.href = "/home";
+      window.location.reload();
     } catch (err) {
       setError(err.message || "Credenciais inválidas");
     }
