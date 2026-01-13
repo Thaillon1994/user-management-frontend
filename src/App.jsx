@@ -24,22 +24,26 @@ export default function App() {
          <Route path="/login" element={<Login />} />
          <Route path="/register" element={<Register />} />
          
-         {/* Todas as outras páginas com Layout */}
+         {/* Página principal com Layout */}
          <Route path="/" element={<Layout />}>
            <Route index element={<Home />} />
+         </Route>
+         
+         {/* Rotas do usuário com Layout */}
+         <Route path="/" element={<Layout />}>
            <Route path="buscar" element={<Home />} />
            <Route path="comprar" element={<Home />} />
            <Route path="anunciar" element={<Home />} />
            <Route path="home" element={<Home />} />
            <Route path="admin" element={<AdminOnly />} />
-           
-           {/* Rotas do usuário */}
            <Route path="favorites" element={<Favorites />} />
            <Route path="alerts" element={<Alerts />} />
            <Route path="visits" element={<Visits />} />
            <Route path="proposals" element={<Proposals />} />
-           
-           {/* Rotas administrativas */}
+         </Route>
+         
+         {/* Rotas administrativas com proteção */}
+         <Route path="/" element={<Layout />}>
            <Route element={<AdminRoute />}>
              <Route path="users" element={<UserManagement />} />
              <Route path="imoveis" element={<ImovelManagement />} />

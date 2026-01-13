@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { authService } from "../services/api";
+import { authService } from "../services/mockApi";
 import Header from "../components/Header";
 import "../styles/Homepage.css";
 import "../styles/Background.css";
+import "../styles/DemoCredentials.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -41,12 +42,18 @@ export default function Login() {
                 Entre para gerenciar seus imóveis, consignações e acompanhar sua área exclusiva
               </p>
               
-              <form onSubmit={handleSubmit} className="login-form">
-                {error && (
-                  <div className="login-error">
-                    {error}
-                  </div>
-                )}
+               <form onSubmit={handleSubmit} className="login-form">
+                 <div className="demo-credentials">
+                   <strong>🔐 DADOS DEMONSTRAÇÃO:</strong><br/>
+                   Email: <code>admin@smartrent.com</code><br/>
+                   Senha: <code>123456</code>
+                 </div>
+                 
+                 {error && (
+                   <div className="login-error">
+                     {error}
+                   </div>
+                 )}
                 
                 <div className="form-group">
                   <label htmlFor="email">Email</label>

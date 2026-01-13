@@ -34,22 +34,14 @@
   50% { opacity: 0.8; }
 }
 
-/* Ajustar layout quando houver banner */
+/* Layout normal sem banner */
 .app {
-  padding-top: 40px; /* Altura do banner */
+  padding-top: 0;
 }
 
 @media (max-width: 768px) {
   .demo-top-content {
     font-size: var(--font-size-xs);
     padding: 0 var(--spacing-sm);
-  }
-  
-  .app {
-    padding-top: 50px; /* Mais espaço no mobile */
-  }
-  
-  .demo-top-banner {
-    padding: var(--spacing-xs) 0;
   }
 }
