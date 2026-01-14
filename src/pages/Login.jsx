@@ -25,15 +25,37 @@ export default function Login() {
       console.log("✅ Login response:", result);
       
       if (result.success) {
-        console.log("🎉 Login bem sucedido! Usuário:", result.user.name);
+        console.log("🎉 Login bem sucedido! Usuário:", result.user.name, "ID:", result.user.id);
+        console.log("🔑 Token:", result.accessToken);
+        console.log("👤 Role:", result.user.role);
+        
         localStorage.setItem("token", result.accessToken);
         localStorage.setItem("user", JSON.stringify(result.user));
-        window.location.href = "/home";
-        window.location.reload();
+        
+        // Limpar qualquer estado anterior
+        localStorage.removeItem("user_state");
+        localStorage.removeItem("last_redirect_attempt");
+        
+        console.log("🔄 Redirecionando para dashboard...");
+        
+        // Redirecionamento imediato
+        window.location.replace("/home");
       } else {
-        console.log("❌ Falha no login. Usuários disponíveis:");
-        console.log("joao@smartrent.com");
-        console.log("admin@smartrent.com");
+        console.error("❌ Falha no login!");
+        console.error("💥 Credencial:", email);
+        console.error("💥 Tentativas restantes:", localStorage.getItem("login_attempts") || "0");
+        
+        // Incrementar contador de tentativas
+        const attempts = parseInt(localStorage.getItem("login_attempts") || "0") + 1;
+        localStorage.setItem("login_attempts", attempts.toString());
+        
+        if (attempts > 3) {
+          console.warn("🚫 Muitas tentativas. Por favor, aguarde 30 minutos.");
+          setError("Muitas tentativas. Por favor, aguarde 30 minutos.");
+          return;
+        }
+        
+        setError("Email ou senha incorretos.");
       }
     } catch (err) {
       console.error("💥 Erro no login:", err);
