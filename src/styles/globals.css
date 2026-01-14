@@ -3,6 +3,68 @@
   --primary-blue: #0066CC;
   --primary-blue-hover: #0052A3;
   --primary-blue-light: #E6F2FF;
+  
+  /* Tamanhos e Espaçamento - Baseados em Design Ergonômico */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  
+  /* Tipografia - Melhor Legibilidade */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Z-Index Melhorado */
+  --z-dropdown: 1000;
+  --z-header: 1020;
+  --z-overlay: 10;
+  --z-modal: 1050;
+  
+  /* Bordas e Sombras - Mais Definidos e Suaves */
+  --border-radius-xs: 2px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-2xl: 20px;
+  
+  --border-radius-pill: 999px;
+  
+  /* Transições Mais Suaves */
+  --transition-fast: 150ms ease;
+  --transition-normal: 200ms ease;
+  --transition-slow: 300ms ease;
+  
+  /* Cores Adicionais para Maior Acessibilidade */
+  --color-primary-text: #1a1a1a;
+  --color-secondary-text: #6b7280;
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --color-error: #dc3545;
+  --color-info: #17a2b8;
+  
+  /* Cores de Fundo e Superfície */
+  --color-surface: #ffffff;
+  --color-surface-hover: #f8f9fa;
+  --color-surface-secondary: #f1f3f4;
+  --color-overlay: rgba(0, 0, 0, 0.8);
+  
+  /* Cores de Bordas */
+  --color-border: #dee2e6;
+  --color-border-focus: #0066cc;
   --primary-gradient: linear-gradient(135deg, #0066CC, #004080);
   
   /* Cores Complementares */

@@ -29,7 +29,7 @@ export default function HeroSection({ onSearch }) {
       vagas: 3,
       valorMensal: 4500,
       dataPostagem: "15/01/2024",
-      imagem: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?w=800&h=600&fit=crop",
+      imagem: "/src/assets/home-DO80yzNA.png",
       descricao: "Casa de luxo com acabamento premium, localização nobre em Morumbi. Piscina aquecida, salão de festas, jardim amplo e segurança 24h. Ideal para famílias exigentes.",
       caracteristicas: ["4 suítes", "Piscina aquecida", "Churrasqueira", "Jardim", "Salão de festas", "Segurança 24h", "Garagem p/3 carros"],
       condominio: 850,
