@@ -16,10 +16,14 @@ export default function Layout() {
       const storedUser = localStorage.getItem('user');
       if (storedUser) {
         try {
-          setUser(JSON.parse(storedUser));
+          const userData = JSON.parse(storedUser);
+          setUser(userData);
+          console.log("✅ Usuário recuperado do localStorage:", userData);
         } catch (error) {
           console.error('Erro ao carregar usuário do localStorage:', error);
         }
+      } else {
+        console.log("ℹ️ Nenhum usuário encontrado no localStorage");
       }
     }
   };

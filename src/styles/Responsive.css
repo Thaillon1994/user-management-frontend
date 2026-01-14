@@ -117,9 +117,44 @@
   box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
 }
 
-/* User Dropdown */
-.user-dropdown {
+/* User Dropdown - Melhorado */
+.user-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-sm);
   position: relative;
+}
+
+.user-button:hover {
+  background: var(--primary-blue-light);
+  color: var(--color-surface);
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.user-icon {
+  font-size: var(--font-size-lg);
+}
+
+.user-name {
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary-text);
+  margin-right: var(--spacing-xs);
+}
+
+.dropdown-arrow {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-left: var(--spacing-xs);
+  transition: transform 0.2s ease;
 }
 
 .user-button {

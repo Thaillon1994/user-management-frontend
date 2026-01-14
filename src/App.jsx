@@ -52,6 +52,7 @@ export default function App() {
               <Route path="consignacoes" element={<ConsignacaoManagement />} />
               <Route path="contratos" element={<ContratoManagement />} />
               <Route path="boletos" element={<BoletoManagement />} />
+              <Route path="/admin" element={<AdminDashboard />} />
             </Route>
           </Route>
          
