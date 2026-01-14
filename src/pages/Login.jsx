@@ -25,15 +25,15 @@ export default function Login() {
       console.log("✅ Login response:", result);
       
       if (result.success) {
-        console.log("🎉 Login bem sucedido!");
+        console.log("🎉 Login bem sucedido! Usuário:", result.user.name);
         localStorage.setItem("token", result.accessToken);
         localStorage.setItem("user", JSON.stringify(result.user));
-        
-        // Forçar reload da página para atualizar estado do usuário
         window.location.href = "/home";
         window.location.reload();
       } else {
-        console.log("❌ Falha no login");
+        console.log("❌ Falha no login. Usuários disponíveis:");
+        console.log("joao@smartrent.com");
+        console.log("admin@smartrent.com");
       }
     } catch (err) {
       console.error("💥 Erro no login:", err);
